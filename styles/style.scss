@@ -1,0 +1,58 @@
+@import "./weather-icons.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+body {
+  background-color: rgb(124, 174, 248);
+  font-family: "Montserrat", sans-serif;
+}
+
+.weather-display {
+  position: relative;
+  top: 100px;
+  background: rgb(7, 200, 249);
+  background: radial-gradient(
+    circle,
+    rgba(7, 200, 249, 1) 0%,
+    rgba(9, 166, 243, 1) 25%,
+    rgba(10, 133, 237, 1) 50%,
+    rgba(12, 99, 231, 1) 75%,
+    rgba(13, 65, 225, 1) 100%
+  );
+  border-radius: 10px;
+
+  h1 {
+    font-weight: 600;
+  }
+
+  .weather-description {
+    font-weight: 500;
+  }
+
+  .btn {
+    padding: 20px;
+    background-color: #fff;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px -1px #ffffff;
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    transition-duration: 0.3s;
+    transition-property: color, background-color;
+
+    &:hover {
+      background-color: #2098d1;
+      color: white;
+    }
+  }
+
+  .weather-icon {
+    animation: bounce 4s ease-in-out alternate-reverse infinite;
+  }
+}
+
+.weather-container {
+  position: relative;
+  top: -700px;
+}
